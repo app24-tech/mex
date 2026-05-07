@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Embedded Site</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+  <title>Applikasi LPMP</title>
 </head>
 <body>
-
-  <iframe src="https://script.google.com/macros/s/AKfycbz4b_SKFAdN3egRrXdEa16qqw2zNC-5s5dfZSmRFkg/dev"></iframe>
-
+  <iframe src="https://script.google.com/macros/s/AKfycbw32LgIk-nt5lvjSaPc6F2edmYvA-r43ej0XVwqUNSy4Eb7BzwwicfuE5EzcOMpg1b9_g/exec" 
+    width="100%" 
+    height="100%" 
+    allowfullscreen="true" 
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+  <script>
+    window.onload = function() {
+      document.querySelector('iframe').requestFullscreen().catch((err) => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+      });
+    };
+  </script>
 </body>
 </html>
